@@ -52,28 +52,45 @@ public class PlayerController : MonoBehaviour
     private float moveInputV;
     public float climbSpeed;
 
+    //shoot things
+    private KeyCode shootKeyCode;
+    public GameObject projectile;
+    public float projectileSpeed;
+    public Vector2 projectileRecoil;
+    private Vector2 recoilDirection;
+    public Vector2 projectileOffset;
+    public float projectileScreenShake;
+    public float projectileScreenShakeTime;
+    public int burstSize = 1;
+    public float burstDelay = 0.1f;
+    public float fireDelay = 0.2f;
+    private float lastShot = 0;
+    private Vector3 burstVelocity;
+    private Vector3 weaponVector;
     //Respawn info
     [HideInInspector]
     public Vector3 RespawnPoint = new Vector3();
 
     //animation
     private Animator myAnim;
-    
+    private FollowingCamera myCam;
+
 
     // Start is called before the first frame update
     void Start()
     {
+        shootKeyCode = KeyCode.E;
+
         myRb = GetComponent<Rigidbody2D>();
         myAud = GetComponent<AudioSource>();
         myAnim = GetComponent<Animator>();
+        myCam = FindObjectOfType<FollowingCamera>();
 
         jumps = extraJumps;
-
-        RespawnPoint = transform.position;
     }
 
     //Update is called once per frame
-    private void Update()
+    void Update()
     {
 
         moveInputH = Input.GetAxisRaw("Horizontal");
@@ -123,7 +140,47 @@ public class PlayerController : MonoBehaviour
             myRb.velocity = (Vector2.up * jumpForce) + new Vector2(myRb.velocity.x, 0);
             jumpPressed = true;
         }
+        if (Input.GetKeyDown(shootKeyCode))
+        {
+            if(Time.time - lastShot > fireDelay)
+            {
+                switch(facingRight)
+                {
+                    case true:
+                    burstVelocity = new Vector3((transform.right.x * projectileSpeed) + myRb.velocity.x, (transform.right.y * projectileSpeed) + myRb.velocity.y, 0);
+                    
+                    break;
+
+                    case false:
+                    burstVelocity = new Vector3((-transform.right.x * projectileSpeed) - myRb.velocity.x, (-transform.right.y * projectileSpeed) - myRb.velocity.y, 0);
+                    
+                    break;
+                }
+                StartCoroutine(shoot());
+            }
+        }
     }
+    IEnumerator shoot()
+    {
+        myRb.AddForce(projectileRecoil);
+        lastShot = Time.time;
+        for(int i = 0; i < burstSize; i++)
+        {
+            myCam.TriggerShake(projectileScreenShakeTime, projectileScreenShake);
+
+            weaponVector = new Vector3(projectileOffset.x + transform.position.x, projectileOffset.y + transform.position.y, 0);
+            if (!facingRight)
+            {
+                weaponVector.x = weaponVector.x - projectileOffset.x*2;
+            }
+            GameObject pew = Instantiate(projectile, weaponVector, transform.rotation);
+            
+            pew.GetComponent<Rigidbody2D>().AddForce(burstVelocity);
+
+            yield return new WaitForSeconds(burstDelay);
+        }
+    }
+
 
     // FixedUpdate is called once per physics frame
     void FixedUpdate()
