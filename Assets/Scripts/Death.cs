@@ -13,7 +13,7 @@ public class Death : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        SceneManager.LoadScene("EndScene");
     }
 
     // Update is called once per frame
