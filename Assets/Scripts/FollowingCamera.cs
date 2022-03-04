@@ -13,9 +13,18 @@ public class FollowingCamera : MonoBehaviour
 
     public float snapSpeed = 0.5f;
 
+    public float yMax = 10;
+    public float yMin = 0;
+
+    
+    public float xMax = 0;
+    public float xMin = 0;
 
     public float shakeTime = 0;
     public float shakeMagnitude = 0;
+
+  
+    public Vector3 newPos;
 
     // Start is called before the first frame update
     void Start()
@@ -39,8 +48,9 @@ public class FollowingCamera : MonoBehaviour
 
     private void FixedUpdate()
     {
-        Vector3 newPos = target.transform.position;
+        
         newPos.z = transform.position.z;
+        newPos = target.transform.position;
 
         if(shakeTime > 0)
         {
@@ -55,7 +65,18 @@ public class FollowingCamera : MonoBehaviour
 
 
 
-        transform.position = Vector3.Lerp(transform.position, newPos, snapSpeed);
+        newPos = Vector3.Lerp(transform.position, newPos, snapSpeed);
+
+        if (newPos.x > xMax)
+            newPos.x = xMax;
+        if (newPos.x < xMin)
+            newPos.x = xMin;
+        if (newPos.y > yMax)
+            newPos.y = yMax;
+        if (newPos.y < yMin)
+            newPos.y = yMin;
+
+        transform.position = new Vector3(newPos.x, newPos.y, transform.position.z);
     }
 
     public void TriggerShake(float time, float magnitude)
