@@ -10,24 +10,14 @@ using UnityEngine.SceneManagement;
 
 public class EndDoor : MonoBehaviour
 {
-    public string LevelToLoad = "EndScene";
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
+    public string wuj;
+    private PlayerController pc;
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.GetComponent<PlayerController>() != null)
+        if(collision.gameObject.TryGetComponent<PlayerController>(out pc))
         {
-            SceneManager.LoadScene(LevelToLoad);
+            SceneManager.LoadScene(wuj);
+            GameManager.stage++;
         }
     }
 }
