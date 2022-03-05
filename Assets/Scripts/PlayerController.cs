@@ -266,7 +266,12 @@ public class PlayerController : MonoBehaviour
         if(collision.gameObject.CompareTag("Enemy"))
         {
             myRb.velocity = Vector2.zero;
-            transform.position = RespawnPoint;
+            Death Grim = GetComponent<Death>();
+            if (Grim != null)
+            {
+                Grim.OnDeath.Invoke();
+                
+            }
         }
     }
 }
