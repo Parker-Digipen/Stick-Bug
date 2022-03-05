@@ -1,16 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Events;
-using UnityEngine.SceneManagement;
 
-public class Death : MonoBehaviour
+public class ChangeSceneOnDeath : MonoBehaviour
 {
-    public UnityEvent OnDeath = new UnityEvent();
-
-
-
-
     // Start is called before the first frame update
     void Start()
     {
@@ -20,6 +13,6 @@ public class Death : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        
     }
 }

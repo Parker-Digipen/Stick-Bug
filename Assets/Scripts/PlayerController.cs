@@ -270,6 +270,7 @@ public class PlayerController : MonoBehaviour
             if (Grim != null)
             {
                 Grim.OnDeath.Invoke();
+                
             }
         }
     }
