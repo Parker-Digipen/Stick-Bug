@@ -45,5 +45,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnCount: 2
   spawnDelay: 1
-  toSpawn: {fileID: 8358313863842535977, guid: 744849acf013e5e4eb5e74ae40ed5ae9, type: 3}
+  toSpawn: {fileID: 8482798391040974842, guid: 3be0276eab54c6d4c8d90e4bde622b15, type: 3}
   facingRight: 0
