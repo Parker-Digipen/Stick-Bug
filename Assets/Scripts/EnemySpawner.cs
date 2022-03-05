@@ -8,7 +8,12 @@ public class EnemySpawner : MonoBehaviour
     public int spawnDelay;
     public GameObject toSpawn;
     public bool facingRight;
-    void go()
+    private void Start() 
+    {
+        GameManager.SpawnEnemies.AddListener(go);
+        GameManager.SpawnEnemies.Invoke();    
+    }
+    public void go()
     {
         StartCoroutine(spawn());
     }

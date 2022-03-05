@@ -15,8 +15,13 @@ public class CreateOnDeath : MonoBehaviour
         Vector3 spawn = Random.insideUnitCircle * randOffset;
         spawn += transform.position + Offset;
         Instantiate(objectToMake, spawn, transform.rotation );
+        Invoke("woo", 0.5f);
     }
 
+    void woo()
+    {
+
+    }
     // Start is called before the first frame update
     void Start()
     {
@@ -25,11 +30,5 @@ public class CreateOnDeath : MonoBehaviour
         {
             grim.OnDeath.Invoke();
         }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

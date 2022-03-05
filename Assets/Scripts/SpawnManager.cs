@@ -5,14 +5,14 @@ using UnityEngine;
 public class SpawnManager : MonoBehaviour
 {
     public float spawnMultiplier = 1;
-    private EnemySpawner spawners;
+    private EnemySpawner[] spawners;
     // Start is called before the first frame update
     void Start()
     {
-        spawners = FindObjectOfType<EnemySpawner>();
+        spawners = FindObjectsOfType<EnemySpawner>();
         for(int i = 0; i < (int)(GameManager.stage * spawnMultiplier); i++)
         {
-             
+             spawners[Random.Range(0, (int)(GameManager.stage * spawnMultiplier))].spawnCount++;
         }   
     }
 }

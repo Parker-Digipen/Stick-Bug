@@ -15,6 +15,7 @@ public class GameManager : MonoBehaviour
     public static int stage;
     //event to listen to for the score change
     public static UnityEvent ScoreUpdate = new UnityEvent();
+    public static UnityEvent SpawnEnemies = new UnityEvent();
 
     //score property and int behind it
     private static int _score = 0;
