@@ -12,17 +12,22 @@ public class PatrolEnemy : MonoBehaviour
     public float speed;
     public bool movingRight = false;
 
+    private Animator myAnim;
+
     public Transform frontDetection;
     public Transform backDetection;
+
 
     private Rigidbody2D myRB;
 
     public float groundRayDist = 2f;
     public float wallRayDist = 0.2f;
 
+
     // Start is called before the first frame update
     void Start()
     {
+        myAnim = GetComponent<Animator>();
         myRB = GetComponent<Rigidbody2D>();
     }
 
@@ -57,4 +62,21 @@ public class PatrolEnemy : MonoBehaviour
 
 
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            myAnim.SetBool("TouchPlayer", true);
+        }
+    }
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            myAnim.SetBool("TouchPlayer", false);
+        }
+    }
+
 }
+

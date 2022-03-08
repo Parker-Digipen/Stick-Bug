@@ -44,12 +44,18 @@ SpriteAtlas:
     variantMultiplier: 1
     packables:
     - {fileID: 102900000, guid: 015970736cfa36e4c88054972bb3d2ba, type: 3}
-    totalSpriteSurfaceArea: 5618270
+    totalSpriteSurfaceArea: 8993330
     bindAsDefault: 1
     isAtlasV2: 0
     cachedData: {fileID: 0}
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
+  - {fileID: -4689822940132132259, guid: bb4e0ed2c8388954f9ea519ab97d6c67, type: 3}
+  - {fileID: -4045681709946457711, guid: bb4e0ed2c8388954f9ea519ab97d6c67, type: 3}
+  - {fileID: -5166533680956995529, guid: bb4e0ed2c8388954f9ea519ab97d6c67, type: 3}
+  - {fileID: -2575649583333072155, guid: bb4e0ed2c8388954f9ea519ab97d6c67, type: 3}
+  - {fileID: -8859311586376788756, guid: bb4e0ed2c8388954f9ea519ab97d6c67, type: 3}
+  - {fileID: 6793726180107155456, guid: bb4e0ed2c8388954f9ea519ab97d6c67, type: 3}
   - {fileID: -9208175949982238219, guid: 885d479652ac7164b8d655c0c21b1122, type: 3}
   - {fileID: -6307234296465661438, guid: 885d479652ac7164b8d655c0c21b1122, type: 3}
   - {fileID: -7696180984050674804, guid: 885d479652ac7164b8d655c0c21b1122, type: 3}
@@ -186,6 +192,13 @@ SpriteAtlas:
   - {fileID: 7150988714671238286, guid: f3f6f55cbab11634c84b7f1454d58bd0, type: 3}
   - {fileID: -1027009135763586012, guid: f3f6f55cbab11634c84b7f1454d58bd0, type: 3}
   - {fileID: 4493883950556594182, guid: f3f6f55cbab11634c84b7f1454d58bd0, type: 3}
+  - {fileID: 5704420531145803721, guid: 65695c3d591967f4a94a3de75fea9340, type: 3}
+  - {fileID: -148617073940163930, guid: 65695c3d591967f4a94a3de75fea9340, type: 3}
+  - {fileID: 4729606205655721961, guid: 65695c3d591967f4a94a3de75fea9340, type: 3}
+  - {fileID: 8793639957104055765, guid: 65695c3d591967f4a94a3de75fea9340, type: 3}
+  - {fileID: 6084859605308855041, guid: 65695c3d591967f4a94a3de75fea9340, type: 3}
+  - {fileID: 8603369663158992956, guid: 65695c3d591967f4a94a3de75fea9340, type: 3}
+  - {fileID: -5906421172241655209, guid: 65695c3d591967f4a94a3de75fea9340, type: 3}
   - {fileID: 1671283345461455480, guid: 950f927dbc9d7d146bfeab77e560f475, type: 3}
   - {fileID: -3638366375080524030, guid: 950f927dbc9d7d146bfeab77e560f475, type: 3}
   - {fileID: 3774374558072554424, guid: 950f927dbc9d7d146bfeab77e560f475, type: 3}
@@ -295,8 +308,24 @@ SpriteAtlas:
   - {fileID: -2209401061123471698, guid: d37e19ad10172ab4fb53c4f7e74a4e55, type: 3}
   - {fileID: 1018328791618719094, guid: d37e19ad10172ab4fb53c4f7e74a4e55, type: 3}
   - {fileID: 6731733094262721628, guid: d37e19ad10172ab4fb53c4f7e74a4e55, type: 3}
+  - {fileID: -1251477172599032703, guid: 810236ed33cb88b41a0c3e87c138ba2e, type: 3}
+  - {fileID: 312470314183269093, guid: 810236ed33cb88b41a0c3e87c138ba2e, type: 3}
+  - {fileID: 6370482569233875444, guid: 810236ed33cb88b41a0c3e87c138ba2e, type: 3}
+  - {fileID: 92280163218962170, guid: 810236ed33cb88b41a0c3e87c138ba2e, type: 3}
+  - {fileID: -896735709768157495, guid: 810236ed33cb88b41a0c3e87c138ba2e, type: 3}
+  - {fileID: 227539562918199443, guid: 810236ed33cb88b41a0c3e87c138ba2e, type: 3}
+  - {fileID: 7227627775152661277, guid: 810236ed33cb88b41a0c3e87c138ba2e, type: 3}
+  - {fileID: -9171237209039327861, guid: 810236ed33cb88b41a0c3e87c138ba2e, type: 3}
+  - {fileID: 4928704577121564103, guid: 810236ed33cb88b41a0c3e87c138ba2e, type: 3}
+  - {fileID: -8808728637387532836, guid: 810236ed33cb88b41a0c3e87c138ba2e, type: 3}
   - {fileID: 21300000, guid: 9448701fdbdfbdd4bb6d7a8e22c982cb, type: 3}
   m_PackedSpriteNamesToIndex:
+  - RunWithGun_1
+  - RunWithGun_0
+  - RunWithGun_3
+  - RunWithGun_2
+  - RunWithGun_5
+  - RunWithGun_4
   - GingerbreadManDraft_5
   - GingerbreadManDraft_4
   - GingerbreadManDraft_3
@@ -433,6 +462,13 @@ SpriteAtlas:
   - GingerBreadManDoorOpen_1
   - GingerBreadManDoorOpen_2
   - GingerBreadManDoorOpen_3
+  - idle_4
+  - idle_5
+  - idle_6
+  - idle_0
+  - idle_1
+  - idle_2
+  - idle_3
   - rotating_coin_0
   - rotating_coin_1
   - rotating_coin_2
@@ -542,6 +578,16 @@ SpriteAtlas:
   - tileset_96
   - tileset_95
   - tileset_94
+  - AlienAttack_5
+  - AlienAttack_4
+  - AlienAttack_7
+  - AlienAttack_6
+  - AlienAttack_1
+  - AlienAttack_0
+  - AlienAttack_3
+  - AlienAttack_2
+  - AlienAttack_9
+  - AlienAttack_8
   - Square
   m_RenderDataMap: {}
   m_Tag: Tiles
