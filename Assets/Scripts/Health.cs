@@ -10,12 +10,16 @@ public class Health : MonoBehaviour
     public bool DestroyAtZero = true;
 
     public float InvincTime = 0;
-    float InvTimer = 0;
+    public float InvTimer = 0;
 
-    float DeathTime = 2.3f;
+    public float DeathTime = 2.3f;
     bool Dying = false;
+    private AudioSource myAD;
+    public AudioClip hurt;
+    public AudioClip death;
     public void ChangeHealth(int amount)
     {
+        myAD.PlayOneShot(hurt);
         //check if the amount is damage if so check if invincibility currently
         if (amount >= 0 || InvTimer <= 0)
         {
@@ -38,6 +42,7 @@ public class Health : MonoBehaviour
 
     IEnumerator TimedDeath()
     {
+        myAD.PlayOneShot(death);
         Dying = true;
         yield return new WaitForSeconds(DeathTime);
         Death Grim = GetComponent<Death>();
@@ -50,7 +55,7 @@ public class Health : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        myAD = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame

@@ -9,10 +9,14 @@ public class SpawnManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //populates spawners array
         spawners = FindObjectsOfType<EnemySpawner>();
         for(int i = 0; i < (int)(GameManager.stage * spawnMultiplier); i++)
         {
-             spawners[Random.Range(0, (int)(GameManager.stage * spawnMultiplier))].spawnCount++;
-        }   
+            //increases to spawn count at random spawners
+            spawners[Random.Range(0, (int)(GameManager.stage * spawnMultiplier))].spawnCount++;
+        }
+        //spawns things
+        GameManager.SpawnEnemies.Invoke();
     }
 }

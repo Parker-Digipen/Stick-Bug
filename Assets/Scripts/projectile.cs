@@ -20,7 +20,7 @@ public class projectile : MonoBehaviour
     {
         if (collision.gameObject.layer == 7)
         {
-            Destroy(collision.gameObject);
+            collision.gameObject.GetComponent<Health>().ChangeHealth(-1);
         }
         Destroy(this.gameObject);
     }

@@ -21,7 +21,6 @@ public class PlayerController : MonoBehaviour
 
     //used for checking what direction to be flipped
     private bool facingRight = true;
-
     //things for ground checking
     private bool isGrounded = false;
     public Transform groundCheck;
@@ -53,6 +52,7 @@ public class PlayerController : MonoBehaviour
     public float climbSpeed;
 
     //shoot things
+    public AudioClip shootNoise;
     private KeyCode shootKeyCode;
     public GameObject projectile;
     public float projectileSpeed;
@@ -166,6 +166,8 @@ public class PlayerController : MonoBehaviour
         lastShot = Time.time;
         for(int i = 0; i < burstSize; i++)
         {
+            myAud.PlayOneShot(shootNoise);
+
             myCam.TriggerShake(projectileScreenShakeTime, projectileScreenShake);
 
             weaponVector = new Vector3(projectileOffset.x + transform.position.x, projectileOffset.y + transform.position.y, 0);
@@ -265,13 +267,10 @@ public class PlayerController : MonoBehaviour
     {
         if(collision.gameObject.CompareTag("Enemy"))
         {
+            //sets speed to zero
             myRb.velocity = Vector2.zero;
-            Death Grim = GetComponent<Death>();
-            if (Grim != null)
-            {
-                Grim.OnDeath.Invoke();
-                
-            }
+            //recuces health
+            GetComponent<Health>().ChangeHealth(-1);
         }
     }
 }
