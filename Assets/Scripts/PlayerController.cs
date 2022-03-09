@@ -7,6 +7,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 
 [RequireComponent(typeof(Rigidbody2D))]
@@ -272,5 +273,16 @@ public class PlayerController : MonoBehaviour
             //recuces health
             GetComponent<Health>().ChangeHealth(-1);
         }
+    }
+
+    public void OnDeath()
+    {
+      
+        Invoke("ChangeScene", 0.2f);
+    }
+
+    public void ChangeScene()
+    {
+        SceneManager.LoadScene("EndScene");
     }
 }
