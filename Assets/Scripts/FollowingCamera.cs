@@ -48,35 +48,38 @@ public class FollowingCamera : MonoBehaviour
 
     private void FixedUpdate()
     {
-        
-        newPos.z = transform.position.z;
-        newPos = target.transform.position;
-
-        if(shakeTime > 0)
+        if (target != null)
         {
-            newPos += Random.insideUnitSphere.normalized * shakeMagnitude;
-            shakeTime -= Time.fixedDeltaTime;
+
+            newPos.z = transform.position.z;
+            newPos = target.transform.position;
+
+            if (shakeTime > 0)
+            {
+                newPos += Random.insideUnitSphere.normalized * shakeMagnitude;
+                shakeTime -= Time.fixedDeltaTime;
+            }
+            else
+            {
+                shakeTime = 0;
+                shakeMagnitude = 0;
+            }
+
+
+
+            newPos = Vector3.Lerp(transform.position, newPos, snapSpeed);
+
+            if (newPos.x > xMax)
+                newPos.x = xMax;
+            if (newPos.x < xMin)
+                newPos.x = xMin;
+            if (newPos.y > yMax)
+                newPos.y = yMax;
+            if (newPos.y < yMin)
+                newPos.y = yMin;
+
+            transform.position = new Vector3(newPos.x, newPos.y, transform.position.z);
         }
-        else
-        {
-            shakeTime = 0;
-            shakeMagnitude = 0;
-        }
-
-
-
-        newPos = Vector3.Lerp(transform.position, newPos, snapSpeed);
-
-        if (newPos.x > xMax)
-            newPos.x = xMax;
-        if (newPos.x < xMin)
-            newPos.x = xMin;
-        if (newPos.y > yMax)
-            newPos.y = yMax;
-        if (newPos.y < yMin)
-            newPos.y = yMin;
-
-        transform.position = new Vector3(newPos.x, newPos.y, transform.position.z);
     }
 
     public void TriggerShake(float time, float magnitude)
@@ -90,4 +93,5 @@ public class FollowingCamera : MonoBehaviour
             shakeMagnitude = magnitude;
         }
     }
+
 }
