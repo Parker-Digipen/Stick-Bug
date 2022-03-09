@@ -10,6 +10,7 @@ using UnityEngine;
 public class PatrolEnemy : MonoBehaviour
 {
     public float speed;
+   
     public bool movingRight = false;
 
     private Animator myAnim;
@@ -29,6 +30,7 @@ public class PatrolEnemy : MonoBehaviour
     {
         myAnim = GetComponent<Animator>();
         myRB = GetComponent<Rigidbody2D>();
+       
     }
 
     // Update is called once per frame
@@ -68,6 +70,7 @@ public class PatrolEnemy : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             myAnim.SetBool("TouchPlayer", true);
+            speed = 0;
         }
     }
     private void OnCollisionExit2D(Collision2D collision)
@@ -75,6 +78,7 @@ public class PatrolEnemy : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             myAnim.SetBool("TouchPlayer", false);
+           
         }
     }
 
