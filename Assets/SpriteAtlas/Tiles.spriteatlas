@@ -45,11 +45,13 @@ SpriteAtlas:
     packables:
     - {fileID: 102900000, guid: 015970736cfa36e4c88054972bb3d2ba, type: 3}
     totalSpriteSurfaceArea: 18471087
+    totalSpriteSurfaceArea: 16433357
     bindAsDefault: 1
     isAtlasV2: 0
     cachedData: {fileID: 0}
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
+  - {fileID: 21300000, guid: 9db1fa91c29002f4db38954924a97a3a, type: 3}
   - {fileID: -4689822940132132259, guid: bb4e0ed2c8388954f9ea519ab97d6c67, type: 3}
   - {fileID: -4045681709946457711, guid: bb4e0ed2c8388954f9ea519ab97d6c67, type: 3}
   - {fileID: -5166533680956995529, guid: bb4e0ed2c8388954f9ea519ab97d6c67, type: 3}
@@ -88,7 +90,6 @@ SpriteAtlas:
   - {fileID: 5608371107031880523, guid: 4bff7d3530c22414e8d7f51dc9e03e61, type: 3}
   - {fileID: 6008230885705530687, guid: 4bff7d3530c22414e8d7f51dc9e03e61, type: 3}
   - {fileID: 4275542191657536191, guid: 4bff7d3530c22414e8d7f51dc9e03e61, type: 3}
-  - {fileID: 21300000, guid: 9db1fa91c29002f4db38954924a97a3a, type: 3}
   - {fileID: -9208175949982238219, guid: 885d479652ac7164b8d655c0c21b1122, type: 3}
   - {fileID: -6307234296465661438, guid: 885d479652ac7164b8d655c0c21b1122, type: 3}
   - {fileID: -7696180984050674804, guid: 885d479652ac7164b8d655c0c21b1122, type: 3}
@@ -400,6 +401,7 @@ SpriteAtlas:
   - {fileID: -8918514481698184932, guid: 5fd596df51140a0488487dd1f0f8f96c, type: 3}
   - {fileID: -3248260237720140295, guid: 5fd596df51140a0488487dd1f0f8f96c, type: 3}
   m_PackedSpriteNamesToIndex:
+  - desert background
   - RunWithGun_1
   - RunWithGun_0
   - RunWithGun_3
@@ -438,7 +440,6 @@ SpriteAtlas:
   - PlayerInteract_6
   - PlayerInteract_5
   - PlayerInteract_4
-  - desert background
   - GingerbreadManDraft_5
   - GingerbreadManDraft_4
   - GingerbreadManDraft_3
