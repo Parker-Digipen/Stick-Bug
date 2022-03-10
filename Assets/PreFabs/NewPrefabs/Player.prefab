@@ -264,6 +264,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe466d42c86e9504bacaa4e4e6114907, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  walkLoop: {fileID: 8300000, guid: 12b29473bccfc8144bc686dffea92a4d, type: 3}
   speed: 100
   airSpeed: 20
   groundCheck: {fileID: 3986420395162377751}
@@ -272,21 +273,21 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1280
   extraJumps: 1
-  jumpForce: 8
+  jumpForce: 10
   jumpTime: 0.3
   gravityScale: 5
   groundDrag: 10
   airDrag: 2
-  jumpNoise: {fileID: 8300000, guid: 39e815db8f7692a44ba7653e4d249281, type: 3}
+  jumpNoise: {fileID: 8300000, guid: 0b2dcccaea614d843970e4e7603dc63a, type: 3}
   whatIsLadder:
     serializedVersion: 2
     m_Bits: 1024
   ladderDist: 1
   climbSpeed: 50
-  shootNoise: {fileID: 0}
+  shootNoise: {fileID: 8300000, guid: b1c8a8ce854e7304dbcea64744feb645, type: 3}
   projectile: {fileID: 4497440191805125978, guid: 9317cc1dfef6f1040bd324c21823596b,
     type: 3}
-  projectileSpeed: 0
+  projectileSpeed: 1000
   projectileRecoil: {x: 0, y: 0}
   projectileOffset: {x: 0, y: 0}
   projectileScreenShake: 0
@@ -307,14 +308,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38b38f1708be417448ac4e88b2927f48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CurrentHealth: 3
-  MaxHealth: 3
+  CurrentHealth: 1
+  MaxHealth: 1
   DestroyAtZero: 1
   InvincTime: 0
   InvTimer: 0
-  DeathTime: 0.3
-  hurt: {fileID: 0}
-  death: {fileID: 0}
+  DeathTime: 0.6
+  hurt: {fileID: 8300000, guid: 0e659796497d7594094d1cbce80eb8d5, type: 3}
+  death: {fileID: 8300000, guid: 4311f0f45db9e7a4489366ae0cbf992d, type: 3}
 --- !u!114 &6394122384411491777
 MonoBehaviour:
   m_ObjectHideFlags: 0
