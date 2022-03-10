@@ -284,7 +284,8 @@ MonoBehaviour:
   ladderDist: 1
   climbSpeed: 50
   shootNoise: {fileID: 0}
-  projectile: {fileID: 0}
+  projectile: {fileID: 4497440191805125978, guid: 9317cc1dfef6f1040bd324c21823596b,
+    type: 3}
   projectileSpeed: 0
   projectileRecoil: {x: 0, y: 0}
   projectileOffset: {x: 0, y: 0}
@@ -311,7 +312,7 @@ MonoBehaviour:
   DestroyAtZero: 1
   InvincTime: 0
   InvTimer: 0
-  DeathTime: 2.3
+  DeathTime: 0.3
   hurt: {fileID: 0}
   death: {fileID: 0}
 --- !u!114 &6394122384411491777

@@ -19,7 +19,10 @@ public class Health : MonoBehaviour
     public AudioClip death;
     public void ChangeHealth(int amount)
     {
-        myAD.PlayOneShot(hurt);
+        if(CurrentHealth - 1 != 0)
+        {
+            myAD.PlayOneShot(hurt);
+        }
         //check if the amount is damage if so check if invincibility currently
         if (amount >= 0 || InvTimer <= 0)
         {
