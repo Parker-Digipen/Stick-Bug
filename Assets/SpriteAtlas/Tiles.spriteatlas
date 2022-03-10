@@ -88,6 +88,7 @@ SpriteAtlas:
   - {fileID: 5608371107031880523, guid: 4bff7d3530c22414e8d7f51dc9e03e61, type: 3}
   - {fileID: 6008230885705530687, guid: 4bff7d3530c22414e8d7f51dc9e03e61, type: 3}
   - {fileID: 4275542191657536191, guid: 4bff7d3530c22414e8d7f51dc9e03e61, type: 3}
+  - {fileID: 21300000, guid: 9db1fa91c29002f4db38954924a97a3a, type: 3}
   - {fileID: -9208175949982238219, guid: 885d479652ac7164b8d655c0c21b1122, type: 3}
   - {fileID: -6307234296465661438, guid: 885d479652ac7164b8d655c0c21b1122, type: 3}
   - {fileID: -7696180984050674804, guid: 885d479652ac7164b8d655c0c21b1122, type: 3}
@@ -107,6 +108,18 @@ SpriteAtlas:
   - {fileID: -3347984106645726015, guid: 9e5bac4777e59db4c80a998172c53472, type: 3}
   - {fileID: -6386380331874166012, guid: 9e5bac4777e59db4c80a998172c53472, type: 3}
   - {fileID: 4055577607036525942, guid: 9e5bac4777e59db4c80a998172c53472, type: 3}
+  - {fileID: -3098895514709955098, guid: 33a9ff475f91f464ca2d8b5703f56a20, type: 3}
+  - {fileID: -5841890831651314445, guid: 33a9ff475f91f464ca2d8b5703f56a20, type: 3}
+  - {fileID: 585986783326448432, guid: 33a9ff475f91f464ca2d8b5703f56a20, type: 3}
+  - {fileID: -4708790119301175501, guid: 33a9ff475f91f464ca2d8b5703f56a20, type: 3}
+  - {fileID: 8610565575992400378, guid: 33a9ff475f91f464ca2d8b5703f56a20, type: 3}
+  - {fileID: 3623700348287497924, guid: 33a9ff475f91f464ca2d8b5703f56a20, type: 3}
+  - {fileID: -6945038649756141661, guid: 33a9ff475f91f464ca2d8b5703f56a20, type: 3}
+  - {fileID: -7451876566494666742, guid: 33a9ff475f91f464ca2d8b5703f56a20, type: 3}
+  - {fileID: 8774151864180844191, guid: 33a9ff475f91f464ca2d8b5703f56a20, type: 3}
+  - {fileID: 6835801334202730952, guid: 33a9ff475f91f464ca2d8b5703f56a20, type: 3}
+  - {fileID: 7803973253228483333, guid: 33a9ff475f91f464ca2d8b5703f56a20, type: 3}
+  - {fileID: -4233545646319245028, guid: 33a9ff475f91f464ca2d8b5703f56a20, type: 3}
   - {fileID: -8986640652043809110, guid: c0adc738596d96b4bbc81b9d8bc08b13, type: 3}
   - {fileID: -3677454241549101050, guid: c0adc738596d96b4bbc81b9d8bc08b13, type: 3}
   - {fileID: 6612499277267783919, guid: c0adc738596d96b4bbc81b9d8bc08b13, type: 3}
@@ -425,6 +438,7 @@ SpriteAtlas:
   - PlayerInteract_6
   - PlayerInteract_5
   - PlayerInteract_4
+  - desert background
   - GingerbreadManDraft_5
   - GingerbreadManDraft_4
   - GingerbreadManDraft_3
@@ -444,6 +458,18 @@ SpriteAtlas:
   - FlyingSlimeIdle_0
   - FlyingSlimeIdle_3
   - FlyingSlimeIdle_2
+  - Sand_4
+  - Sand_5
+  - Sand_6
+  - Sand_7
+  - Sand_0
+  - Sand_1
+  - Sand_2
+  - Sand_3
+  - Sand_8
+  - Sand_9
+  - Sand_11
+  - Sand_10
   - GingerJump_8
   - GingerJump_9
   - GingerJump_6

@@ -16,8 +16,12 @@ public class EndDoor : MonoBehaviour
     {
         if(collision.gameObject.TryGetComponent<PlayerController>(out pc))
         {
-            SceneManager.LoadScene(wuj);
-            GameManager.stage++;
+            if(pc != null)
+            {
+                print("t");
+                SceneManager.LoadScene(wuj);
+                GameManager.stage++;
+            }
         }
     }
 }
