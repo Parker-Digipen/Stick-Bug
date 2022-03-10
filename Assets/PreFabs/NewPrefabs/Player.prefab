@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 5941496379278946691}
   - component: {fileID: 3986420394070421439}
   - component: {fileID: 8397047254862673022}
+  - component: {fileID: 6394122384411491777}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -31,7 +32,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3986420394070421427}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 3.27, y: -1.35, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 3986420395162377751}
@@ -78,13 +79,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: -3347984106645726015, guid: 9e5bac4777e59db4c80a998172c53472,
-    type: 3}
-  m_Color: {r: 0.5210975, g: 0.9811321, b: 0.44891423, a: 1}
+  m_Sprite: {fileID: 978942612559604503, guid: 5fd596df51140a0488487dd1f0f8f96c, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 2, y: 2}
+  m_Size: {x: 1.2366667, y: 2.2573023}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -122,18 +122,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.07, y: 0.06}
+  m_Offset: {x: -0.32, y: -0.19}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2, y: 2}
-    newSize: {x: 2, y: 2}
+    oldSize: {x: 1.2366667, y: 2.2573023}
+    newSize: {x: 1.2366667, y: 2.2573023}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 1
   serializedVersion: 2
-  m_Size: {x: 0.7, y: 0.7}
+  m_Size: {x: 1.2, y: 2.17}
   m_EdgeRadius: 0
 --- !u!50 &3986420394070421432
 Rigidbody2D:
@@ -176,7 +176,7 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 1
+  MinDistance: 1.1362548
   MaxDistance: 500
   Pan2D: 0
   rolloffMode: 0
@@ -264,36 +264,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe466d42c86e9504bacaa4e4e6114907, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 125
+  speed: 100
   airSpeed: 20
   groundCheck: {fileID: 3986420395162377751}
-  checkRadius: 0.1
+  checkRadius: 1
   whatIsGround:
     serializedVersion: 2
     m_Bits: 1280
   extraJumps: 1
-  jumpForce: 10
-  jumpTime: 0.2
+  jumpForce: 8
+  jumpTime: 0.3
   gravityScale: 5
-  groundDrag: 8
-  airDrag: 0.7
-  jumpNoise: {fileID: 8300000, guid: 5254306c1cb9deb4b906c4f8b03bdc76, type: 3}
+  groundDrag: 10
+  airDrag: 2
+  jumpNoise: {fileID: 8300000, guid: 39e815db8f7692a44ba7653e4d249281, type: 3}
   whatIsLadder:
     serializedVersion: 2
     m_Bits: 1024
   ladderDist: 1
   climbSpeed: 50
-  shootNoise: {fileID: 8300000, guid: 3b7f2eadadfd3aa4fac82ac437deb7c8, type: 3}
-  projectile: {fileID: 4497440191805125978, guid: 9317cc1dfef6f1040bd324c21823596b,
-    type: 3}
-  projectileSpeed: 1000
+  shootNoise: {fileID: 0}
+  projectile: {fileID: 0}
+  projectileSpeed: 0
   projectileRecoil: {x: 0, y: 0}
-  projectileOffset: {x: 0.1, y: 0}
-  projectileScreenShake: 0.2
-  projectileScreenShakeTime: 0.1
+  projectileOffset: {x: 0, y: 0}
+  projectileScreenShake: 0
+  projectileScreenShakeTime: 0
   burstSize: 1
   burstDelay: 0.1
-  fireDelay: 0.25
+  fireDelay: 0.2
   RespawnPoint: {x: 0, y: 0, z: 0}
 --- !u!114 &8397047254862673022
 MonoBehaviour:
@@ -307,14 +306,41 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38b38f1708be417448ac4e88b2927f48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CurrentHealth: 1
-  MaxHealth: 5
+  CurrentHealth: 3
+  MaxHealth: 3
   DestroyAtZero: 1
   InvincTime: 0
   InvTimer: 0
-  DeathTime: 0.5
-  hurt: {fileID: 8300000, guid: c542569b0cf15f64c9d4f44fc82accc6, type: 3}
-  death: {fileID: 8300000, guid: 825c5dccdfc030e4397c8c85b9339623, type: 3}
+  DeathTime: 2.3
+  hurt: {fileID: 0}
+  death: {fileID: 0}
+--- !u!114 &6394122384411491777
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3986420394070421427}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b4b3c8f448976d4c9919574e9704329, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnDeath:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3986420394070421439}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        m_MethodName: OnDeath
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &3986420395162377750
 GameObject:
   m_ObjectHideFlags: 0
