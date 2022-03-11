@@ -44,7 +44,9 @@ SpriteAtlas:
     variantMultiplier: 1
     packables:
     - {fileID: 102900000, guid: 015970736cfa36e4c88054972bb3d2ba, type: 3}
+
     totalSpriteSurfaceArea: 24785220
+
     bindAsDefault: 1
     isAtlasV2: 0
     cachedData: {fileID: 0}
@@ -57,6 +59,15 @@ SpriteAtlas:
   - {fileID: -2575649583333072155, guid: bb4e0ed2c8388954f9ea519ab97d6c67, type: 3}
   - {fileID: -8859311586376788756, guid: bb4e0ed2c8388954f9ea519ab97d6c67, type: 3}
   - {fileID: 6793726180107155456, guid: bb4e0ed2c8388954f9ea519ab97d6c67, type: 3}
+  - {fileID: 8598691610351655480, guid: 376195f256c422e488024214bd7d60fd, type: 3}
+  - {fileID: -7591269622283923513, guid: 376195f256c422e488024214bd7d60fd, type: 3}
+  - {fileID: -4894877219555033837, guid: 376195f256c422e488024214bd7d60fd, type: 3}
+  - {fileID: -7857193861968469892, guid: 376195f256c422e488024214bd7d60fd, type: 3}
+  - {fileID: 6901942967387306250, guid: 376195f256c422e488024214bd7d60fd, type: 3}
+  - {fileID: -5679657590885005731, guid: 376195f256c422e488024214bd7d60fd, type: 3}
+  - {fileID: 9083969447635318612, guid: 376195f256c422e488024214bd7d60fd, type: 3}
+  - {fileID: -6130851942531297651, guid: 376195f256c422e488024214bd7d60fd, type: 3}
+  - {fileID: -1825352000054201894, guid: 376195f256c422e488024214bd7d60fd, type: 3}
   - {fileID: -1251477172599032703, guid: 294ffe03b9d80a44cb5da62b1158eeed, type: 3}
   - {fileID: 312470314183269093, guid: 294ffe03b9d80a44cb5da62b1158eeed, type: 3}
   - {fileID: 6370482569233875444, guid: 294ffe03b9d80a44cb5da62b1158eeed, type: 3}
@@ -67,6 +78,7 @@ SpriteAtlas:
   - {fileID: -9171237209039327861, guid: 294ffe03b9d80a44cb5da62b1158eeed, type: 3}
   - {fileID: 4928704577121564103, guid: 294ffe03b9d80a44cb5da62b1158eeed, type: 3}
   - {fileID: -8808728637387532836, guid: 294ffe03b9d80a44cb5da62b1158eeed, type: 3}
+  - {fileID: 21300000, guid: f3778c15e20dad145936a9ab7e631475, type: 3}
   - {fileID: -8985134737584906019, guid: ad936f15b6e548f4d8d5000ba096c9aa, type: 3}
   - {fileID: -278962620164067431, guid: ad936f15b6e548f4d8d5000ba096c9aa, type: 3}
   - {fileID: -4608814311081262565, guid: ad936f15b6e548f4d8d5000ba096c9aa, type: 3}
@@ -89,6 +101,12 @@ SpriteAtlas:
   - {fileID: 5608371107031880523, guid: 4bff7d3530c22414e8d7f51dc9e03e61, type: 3}
   - {fileID: 6008230885705530687, guid: 4bff7d3530c22414e8d7f51dc9e03e61, type: 3}
   - {fileID: 4275542191657536191, guid: 4bff7d3530c22414e8d7f51dc9e03e61, type: 3}
+
+  - {fileID: 21300000, guid: 294899f5c87e71a46b9ab8307bb66478, type: 3}
+  - {fileID: -6244361495144544390, guid: 06a180467a6846a4497aad60e6032547, type: 3}
+  - {fileID: -5862022666285825741, guid: 06a180467a6846a4497aad60e6032547, type: 3}
+  - {fileID: 2695397407002535339, guid: 06a180467a6846a4497aad60e6032547, type: 3}
+
   - {fileID: -9208175949982238219, guid: 885d479652ac7164b8d655c0c21b1122, type: 3}
   - {fileID: -6307234296465661438, guid: 885d479652ac7164b8d655c0c21b1122, type: 3}
   - {fileID: -7696180984050674804, guid: 885d479652ac7164b8d655c0c21b1122, type: 3}
@@ -284,6 +302,7 @@ SpriteAtlas:
   - {fileID: 5387897019352416549, guid: 950f927dbc9d7d146bfeab77e560f475, type: 3}
   - {fileID: 3340004424929419039, guid: 950f927dbc9d7d146bfeab77e560f475, type: 3}
   - {fileID: 5038537178737896021, guid: 950f927dbc9d7d146bfeab77e560f475, type: 3}
+  - {fileID: 21300000, guid: 8613f88db9e92ba4f870dfb0328b7f68, type: 3}
   - {fileID: 8621815960616643281, guid: d37e19ad10172ab4fb53c4f7e74a4e55, type: 3}
   - {fileID: -7131273655155896711, guid: d37e19ad10172ab4fb53c4f7e74a4e55, type: 3}
   - {fileID: -6831599063569703212, guid: d37e19ad10172ab4fb53c4f7e74a4e55, type: 3}
@@ -427,6 +446,15 @@ SpriteAtlas:
   - RunWithGun_2
   - RunWithGun_5
   - RunWithGun_4
+  - moon_8
+  - moon_5
+  - moon_4
+  - moon_7
+  - moon_6
+  - moon_1
+  - moon_0
+  - moon_3
+  - moon_2
   - AlienAttack_5
   - AlienAttack_4
   - AlienAttack_7
@@ -437,6 +465,7 @@ SpriteAtlas:
   - AlienAttack_2
   - AlienAttack_9
   - AlienAttack_8
+  - moon background
   - PlayerRun_8
   - PlayerRun_9
   - PlayerRun_6
@@ -459,6 +488,12 @@ SpriteAtlas:
   - PlayerInteract_6
   - PlayerInteract_5
   - PlayerInteract_4
+
+  - chests alien bot
+  - Platform_2
+  - Platform_1
+  - Platform_0
+
   - GingerbreadManDraft_5
   - GingerbreadManDraft_4
   - GingerbreadManDraft_3
@@ -654,6 +689,7 @@ SpriteAtlas:
   - rotating_coin_7
   - rotating_coin_8
   - rotating_coin_9
+  - chests alien lid
   - tileset_39
   - tileset_38
   - tileset_48
