@@ -4031,11 +4031,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 3986420394070421427, guid: 98b4532921333144497cf3c5ebe2a908,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3986420394070421438, guid: 98b4532921333144497cf3c5ebe2a908,
         type: 3}
       propertyPath: m_RootOrder
@@ -4090,56 +4085,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3986420394070421439, guid: 98b4532921333144497cf3c5ebe2a908,
-        type: 3}
-      propertyPath: walkLoop
-      value: 
-      objectReference: {fileID: 8300000, guid: 12b29473bccfc8144bc686dffea92a4d, type: 3}
-    - target: {fileID: 3986420394070421439, guid: 98b4532921333144497cf3c5ebe2a908,
-        type: 3}
-      propertyPath: jumpForce
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 3986420394070421439, guid: 98b4532921333144497cf3c5ebe2a908,
-        type: 3}
-      propertyPath: jumpNoise
-      value: 
-      objectReference: {fileID: 8300000, guid: 0b2dcccaea614d843970e4e7603dc63a, type: 3}
-    - target: {fileID: 3986420394070421439, guid: 98b4532921333144497cf3c5ebe2a908,
-        type: 3}
-      propertyPath: shootNoise
-      value: 
-      objectReference: {fileID: 8300000, guid: b1c8a8ce854e7304dbcea64744feb645, type: 3}
-    - target: {fileID: 3986420394070421439, guid: 98b4532921333144497cf3c5ebe2a908,
-        type: 3}
-      propertyPath: projectileSpeed
-      value: 1000
-      objectReference: {fileID: 0}
-    - target: {fileID: 8397047254862673022, guid: 98b4532921333144497cf3c5ebe2a908,
-        type: 3}
-      propertyPath: hurt
-      value: 
-      objectReference: {fileID: 8300000, guid: 0e659796497d7594094d1cbce80eb8d5, type: 3}
-    - target: {fileID: 8397047254862673022, guid: 98b4532921333144497cf3c5ebe2a908,
-        type: 3}
-      propertyPath: death
-      value: 
-      objectReference: {fileID: 8300000, guid: 4311f0f45db9e7a4489366ae0cbf992d, type: 3}
-    - target: {fileID: 8397047254862673022, guid: 98b4532921333144497cf3c5ebe2a908,
-        type: 3}
-      propertyPath: DeathTime
-      value: 0.6
-      objectReference: {fileID: 0}
-    - target: {fileID: 8397047254862673022, guid: 98b4532921333144497cf3c5ebe2a908,
-        type: 3}
-      propertyPath: MaxHealth
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8397047254862673022, guid: 98b4532921333144497cf3c5ebe2a908,
-        type: 3}
-      propertyPath: CurrentHealth
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 98b4532921333144497cf3c5ebe2a908, type: 3}

@@ -16,11 +16,13 @@ public class GameManager : MonoBehaviour
     //event to listen to for the score change
     public static UnityEvent ScoreUpdate = new UnityEvent();
     public static UnityEvent SpawnEnemies = new UnityEvent();
+    public static float[] Stats = new float[9];
 
     //score property and int behind it
     private static int _score = 0;
     public static int score
     {
+        
         get
         {
             return _score;

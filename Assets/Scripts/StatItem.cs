@@ -8,20 +8,43 @@ public class StatItem : MonoBehaviour
     private PlayerController myPC;
     private void Start() 
     {
-        myPC = FindObjectOfType<PlayerController>();
-        Stats = new float[8];
-        Stats[0] = myPC.speed;
-        Stats[1] = myPC.airSpeed;
-        Stats[2] = myPC.extraJumps;
-        Stats[3] = myPC.jumpForce;
-        Stats[4] = myPC.jumpTime;
-        Stats[5] = myPC.projectileSpeed;
-        Stats[6] = myPC.burstSize;
-        Stats[8] = myPC.fireDelay;
+
     }
     private void OnCollisionEnter2D(Collision2D other) 
     {        
-        Stats[Random.Range(0, 8)]++;
+        int statChange = 0;
+        statChange = Random.Range(0, 8);
+        switch (statChange)
+        {
+            case 0:
+            GameManager.Stats[0] += 10;
+            break;
+            case 1:
+            GameManager.Stats[1] += 5;
+            break;
+            case 2:
+            GameManager.Stats[2]++;
+            break;
+            case 3:
+            GameManager.Stats[3]++;
+            break;
+            case 4:
+            GameManager.Stats[4] += 50;
+            break;
+            case 5:
+            GameManager.Stats[5] += 0.5f;
+            break;
+            case 6:
+            GameManager.Stats[6]++;
+            break;
+            case 7:
+            GameManager.Stats[7] -= 0.2f;
+            break;
+            case 8:
+            GameManager.Stats[8]++;
+            break;
+            
+        }
         Destroy(this);
     }
 }
