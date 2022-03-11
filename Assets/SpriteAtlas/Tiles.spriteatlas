@@ -44,8 +44,7 @@ SpriteAtlas:
     variantMultiplier: 1
     packables:
     - {fileID: 102900000, guid: 015970736cfa36e4c88054972bb3d2ba, type: 3}
-
-    totalSpriteSurfaceArea: 24785220
+    totalSpriteSurfaceArea: 30049177
 
     bindAsDefault: 1
     isAtlasV2: 0
@@ -261,10 +260,22 @@ SpriteAtlas:
   - {fileID: -7336076203705889676, guid: f99a3879764308a4d92d87d841829522, type: 3}
   - {fileID: -4344611882063969491, guid: f99a3879764308a4d92d87d841829522, type: 3}
   - {fileID: -5241486731584646207, guid: f99a3879764308a4d92d87d841829522, type: 3}
+  - {fileID: 21300000, guid: 5b353d4ac0ea49c4bad53d14d3525b31, type: 3}
   - {fileID: 360936022416560844, guid: f3f6f55cbab11634c84b7f1454d58bd0, type: 3}
   - {fileID: 7150988714671238286, guid: f3f6f55cbab11634c84b7f1454d58bd0, type: 3}
   - {fileID: -1027009135763586012, guid: f3f6f55cbab11634c84b7f1454d58bd0, type: 3}
   - {fileID: 4493883950556594182, guid: f3f6f55cbab11634c84b7f1454d58bd0, type: 3}
+  - {fileID: 6421405835500131634, guid: 1a82c31d8624b304a976d82bc2932e31, type: 3}
+  - {fileID: 5851509442859252492, guid: 1a82c31d8624b304a976d82bc2932e31, type: 3}
+  - {fileID: -57642946196520614, guid: 1a82c31d8624b304a976d82bc2932e31, type: 3}
+  - {fileID: 843871451658177831, guid: 1a82c31d8624b304a976d82bc2932e31, type: 3}
+  - {fileID: -7848053039543966182, guid: 1a82c31d8624b304a976d82bc2932e31, type: 3}
+  - {fileID: -8062895033119871597, guid: 1a82c31d8624b304a976d82bc2932e31, type: 3}
+  - {fileID: 4571517281908330327, guid: 1a82c31d8624b304a976d82bc2932e31, type: 3}
+  - {fileID: -2789071043805589759, guid: 1a82c31d8624b304a976d82bc2932e31, type: 3}
+  - {fileID: -6052378150336184339, guid: 1a82c31d8624b304a976d82bc2932e31, type: 3}
+  - {fileID: -2707563695684737920, guid: 1a82c31d8624b304a976d82bc2932e31, type: 3}
+  - {fileID: 5785919135247823481, guid: 1a82c31d8624b304a976d82bc2932e31, type: 3}
   - {fileID: 3198250923984969119, guid: 289f5a2dbeed00240be18a3c1abc959a, type: 3}
   - {fileID: -7319237435779090274, guid: 289f5a2dbeed00240be18a3c1abc959a, type: 3}
   - {fileID: -5017894878308198506, guid: 289f5a2dbeed00240be18a3c1abc959a, type: 3}
@@ -648,10 +659,22 @@ SpriteAtlas:
   - cavesofgallet_tiles_72
   - cavesofgallet_tiles_8
   - cavesofgallet_tiles_9
+  - PlayerDie
   - GingerBreadManDoorOpen_0
   - GingerBreadManDoorOpen_1
   - GingerBreadManDoorOpen_2
   - GingerBreadManDoorOpen_3
+  - AlienRun_2
+  - AlienRun_3
+  - AlienRun_0
+  - AlienRun_1
+  - AlienRun_6
+  - AlienRun_7
+  - AlienRun_4
+  - AlienRun_5
+  - AlienRun_8
+  - AlienRun_9
+  - AlienRun_10
   - AlienIdle_10
   - AlienIdle_9
   - AlienIdle_8
