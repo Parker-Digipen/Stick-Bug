@@ -14,6 +14,7 @@ using UnityEngine.SceneManagement;
 public class PlayerController : MonoBehaviour
 {
     //speed and movement variables
+    public AudioClip walkLoop;
     public float speed;
     public float airSpeed;
     private float moveInputH;
@@ -75,6 +76,7 @@ public class PlayerController : MonoBehaviour
     //animation
     private Animator myAnim;
     private FollowingCamera myCam;
+    private bool mooving;
 
 
     // Start is called before the first frame update
@@ -93,7 +95,6 @@ public class PlayerController : MonoBehaviour
     //Update is called once per frame
     void Update()
     {
-
         moveInputH = Input.GetAxisRaw("Horizontal");
         if (isGrounded == true)
         {
@@ -208,10 +209,12 @@ public class PlayerController : MonoBehaviour
             if(moveInputV > 0)
             {
                 myRb.AddForce(new Vector2(0, climbSpeed));
+
             }
             else if(moveInputV < 0)
             {
                 myRb.AddForce(new Vector2(0, -climbSpeed));
+
             }
             else
             {
@@ -230,10 +233,12 @@ public class PlayerController : MonoBehaviour
         if(moveInputH == 0)
         {
             myAnim.SetBool("Moving", false);
+            mooving = false;
         }
         else
         {
             myAnim.SetBool("Moving", true);
+            mooving = true;
         }
 
         if (isGrounded && !jumpPressed || isClimbing)
@@ -253,7 +258,15 @@ public class PlayerController : MonoBehaviour
         {
             Flip();
         }
-
+        if(mooving)
+        {
+            if(!myAud.isPlaying)
+                myAud.PlayOneShot(walkLoop);
+        }
+        else
+        {
+            myAud.Stop();
+        }
     }
     //flip the player so sprite faces the other way
     void Flip()

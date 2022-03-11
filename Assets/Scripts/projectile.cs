@@ -18,9 +18,10 @@ public class projectile : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.layer == 7)
+        Health temp;
+        if(collision.gameObject.TryGetComponent<Health>(out temp))
         {
-            collision.gameObject.GetComponent<Health>().ChangeHealth(-1);
+            temp.ChangeHealth(-1);
         }
         Destroy(this.gameObject);
     }
