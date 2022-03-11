@@ -80,7 +80,6 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        myAnim.SetBool("Alive", true);
         shootKeyCode = KeyCode.E;
 
         myRb = GetComponent<Rigidbody2D>();
@@ -281,8 +280,6 @@ public class PlayerController : MonoBehaviour
 
         //Invoke("ChangeScene", 2);
         StartCoroutine(SceneChangeDelay());
-        myAnim.SetBool("Alive", false);
-        print("DeadDeadDeadNow!!!!!");
     }
 
     public void ChangeScene()
