@@ -7,6 +7,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -62,4 +63,25 @@ public class GameManager : MonoBehaviour
         score = 0;
     }
 
+    public void OnDeath()
+    {
+        SceneManager.LoadScene("EndScene");
+        print("Dying!!!");
+        //Invoke("ChangeScene", 2);
+       StartCoroutine(SceneChangeDelay());
+    }
+
+    public void ChangeScene()
+    {
+        print("Dead!!!");
+        Debug.Log("Dead");
+        
+    }
+    private IEnumerator SceneChangeDelay()
+    {
+        yield return new WaitForSeconds(2.0f);
+        print("Dead!!!");
+        Debug.Log("Other dead");
+        SceneManager.LoadScene(2);
+    }
 }

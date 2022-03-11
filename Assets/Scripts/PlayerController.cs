@@ -290,12 +290,18 @@ public class PlayerController : MonoBehaviour
 
     public void OnDeath()
     {
-      
-        Invoke("ChangeScene", 0.2f);
+
+        //Invoke("ChangeScene", 2);
+        StartCoroutine(SceneChangeDelay());
     }
 
     public void ChangeScene()
     {
+        SceneManager.LoadScene("EndScene");
+    }
+    private IEnumerator SceneChangeDelay()
+    {
+        yield return new WaitForSeconds(2);
         SceneManager.LoadScene("EndScene");
     }
 }
