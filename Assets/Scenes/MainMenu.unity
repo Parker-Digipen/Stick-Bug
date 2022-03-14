@@ -254,7 +254,7 @@ AudioSource:
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 41
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -347,10 +347,10 @@ MonoBehaviour:
   levelTracks:
   - LevelName: MainMenu
     Music: {fileID: 8300000, guid: aec25d0ef005e81408150f178392b468, type: 3}
-  - LevelName: BaseLevel
+  - LevelName: LevelOne
     Music: {fileID: 8300000, guid: d7cb2eb32ca47d345a3657cf499a0db1, type: 3}
-  - LevelName: EndScene
-    Music: {fileID: 8300000, guid: 341f29a9508ddb94eaad05fb4c4e6856, type: 3}
+  - LevelName: Loot
+    Music: {fileID: 8300000, guid: 8013006adbe739b47a542cf64cda6e68, type: 3}
 --- !u!4 &1025920353
 Transform:
   m_ObjectHideFlags: 0
