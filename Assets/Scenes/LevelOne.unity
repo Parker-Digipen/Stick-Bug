@@ -375,7 +375,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2af25a1676b1f0e48919525af8965ae1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wuj: Parker
+  wuj: Loot
 --- !u!61 &325035347
 BoxCollider2D:
   m_ObjectHideFlags: 0
