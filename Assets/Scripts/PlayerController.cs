@@ -313,6 +313,7 @@ public class PlayerController : MonoBehaviour
 
     public void OnDeath()
     {
+        myAnim.SetBool("OnGround", isGrounded);
 
         //Invoke("ChangeScene", 2);
         StartCoroutine(SceneChangeDelay());
