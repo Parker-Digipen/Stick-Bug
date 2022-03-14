@@ -14,7 +14,6 @@ using UnityEngine.SceneManagement;
 public class PlayerController : MonoBehaviour
 {
     //speed and movement variables
-    public AudioClip walkLoop;
     public float speed;
     public float airSpeed;
     private float moveInputH;
@@ -24,7 +23,7 @@ public class PlayerController : MonoBehaviour
     //used for checking what direction to be flipped
     private bool facingRight = true;
     //things for ground checking
-    private bool isGrounded = false;
+    public bool isGrounded = false;
     public Transform groundCheck;
     public float checkRadius;
     public LayerMask whatIsGround;
@@ -90,6 +89,39 @@ public class PlayerController : MonoBehaviour
         myCam = FindObjectOfType<FollowingCamera>();
 
         jumps = extraJumps;
+        for(int i = 0; i <= GameManager.Stats.Length; i++)
+        {
+            switch(i)
+            {
+                case 0:
+                speed += GameManager.Stats[0];
+                break;
+                case 1:
+                airSpeed += GameManager.Stats[1];
+                break;
+                case 2:
+                extraJumps += (int) GameManager.Stats[2];
+                break;
+                case 3:
+                jumpForce += GameManager.Stats[3];
+                break;
+                case 4:
+                projectileSpeed += GameManager.Stats[4];
+                break;
+                case 5:
+                jumpTime += GameManager.Stats[5];
+                break;
+                case 6:
+                burstSize += (int) GameManager.Stats[6];
+                break;
+                case 7:
+                fireDelay += GameManager.Stats[7];
+                break;
+                case 8:
+                GetComponent<Health>().CurrentHealth += (int) GameManager.Stats[8];
+                break;
+            }
+        }
     }
 
     //Update is called once per frame
@@ -257,15 +289,6 @@ public class PlayerController : MonoBehaviour
         else if(facingRight == true && moveInputH < 0)
         {
             Flip();
-        }
-        if(mooving)
-        {
-            if(!myAud.isPlaying)
-                myAud.PlayOneShot(walkLoop);
-        }
-        else
-        {
-            myAud.Stop();
         }
     }
     //flip the player so sprite faces the other way
