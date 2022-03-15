@@ -254,7 +254,7 @@ AudioSource:
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 41
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -346,11 +346,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelTracks:
   - LevelName: MainMenu
-    Music: {fileID: 8300000, guid: 9dc278952fbd04f489c90dd679d54719, type: 3}
-  - LevelName: BaseLevel
-    Music: {fileID: 8300000, guid: 9dc278952fbd04f489c90dd679d54719, type: 3}
-  - LevelName: EndScene
-    Music: {fileID: 8300000, guid: 9dc278952fbd04f489c90dd679d54719, type: 3}
+    Music: {fileID: 8300000, guid: aec25d0ef005e81408150f178392b468, type: 3}
+  - LevelName: LevelOne
+    Music: {fileID: 8300000, guid: d7cb2eb32ca47d345a3657cf499a0db1, type: 3}
+  - LevelName: Loot
+    Music: {fileID: 8300000, guid: 8013006adbe739b47a542cf64cda6e68, type: 3}
 --- !u!4 &1025920353
 Transform:
   m_ObjectHideFlags: 0
@@ -377,7 +377,7 @@ GameObject:
   - component: {fileID: 1335948607}
   - component: {fileID: 1335948606}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: One Crunch Man
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -422,7 +422,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Main Title Here!
+  m_text: One Crunch Man
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -674,6 +674,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2062999822}
     m_Modifications:
+    - target: {fileID: 7806682004418710100, guid: 54b01999deac29045ad5f8cb6a2b3a79,
+        type: 3}
+      propertyPath: LevelToLoad
+      value: LevelOne
+      objectReference: {fileID: 0}
     - target: {fileID: 7806682004418710101, guid: 54b01999deac29045ad5f8cb6a2b3a79,
         type: 3}
       propertyPath: m_Pivot.x
