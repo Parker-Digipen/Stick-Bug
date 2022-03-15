@@ -264,6 +264,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe466d42c86e9504bacaa4e4e6114907, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sceneChanger: {fileID: 6406787292436237334, guid: 6ad0a5ed7a601444f8e611f60a20d3a1,
+    type: 3}
   walkLoop: {fileID: 8300000, guid: 12b29473bccfc8144bc686dffea92a4d, type: 3}
   speed: 100
   airSpeed: 20
