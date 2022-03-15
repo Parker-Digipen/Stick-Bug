@@ -13,6 +13,10 @@ using UnityEngine.SceneManagement;
 [RequireComponent(typeof(Rigidbody2D))]
 public class PlayerController : MonoBehaviour
 {
+    //Change the scene after death object:
+    public GameObject sceneChanger;
+    public float sceneChangeDelay;
+
     //speed and movement variables
     public float speed;
     public float airSpeed;
@@ -308,6 +312,13 @@ public class PlayerController : MonoBehaviour
             myRb.velocity = Vector2.zero;
             //recuces health
             GetComponent<Health>().ChangeHealth(-1);
+
+        }
+        if(GetComponent<Health>().CurrentHealth == 0)
+        {
+            myAnim.SetBool("OnGround", isGrounded);
+            myAnim.SetBool("Alive", false);
+            SceneChanger();
         }
     }
 
@@ -315,17 +326,24 @@ public class PlayerController : MonoBehaviour
     {
         myAnim.SetBool("OnGround", isGrounded);
 
+        Instantiate(sceneChanger, this.transform);
+
         //Invoke("ChangeScene", 2);
-        StartCoroutine(SceneChangeDelay());
+        //StartCoroutine(SceneChangeDelay());
     }
 
-    public void ChangeScene()
+   /* public void ChangeScene()
     {
+        yield return new WaitForSeconds(2);
         SceneManager.LoadScene("EndScene");
     }
     private IEnumerator SceneChangeDelay()
     {
         yield return new WaitForSeconds(2);
         SceneManager.LoadScene("EndScene");
+    }*/
+   public void SceneChanger()
+    {
+        Instantiate(sceneChanger, this.transform.position, this.transform.rotation);
     }
 }
