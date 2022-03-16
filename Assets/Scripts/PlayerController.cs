@@ -325,23 +325,11 @@ public class PlayerController : MonoBehaviour
     public void OnDeath()
     {
         myAnim.SetBool("OnGround", isGrounded);
-
+        myAnim.SetBool("Alive", false);
         Instantiate(sceneChanger, this.transform);
 
-        //Invoke("ChangeScene", 2);
-        //StartCoroutine(SceneChangeDelay());
     }
 
-   /* public void ChangeScene()
-    {
-        yield return new WaitForSeconds(2);
-        SceneManager.LoadScene("EndScene");
-    }
-    private IEnumerator SceneChangeDelay()
-    {
-        yield return new WaitForSeconds(2);
-        SceneManager.LoadScene("EndScene");
-    }*/
    public void SceneChanger()
     {
         Instantiate(sceneChanger, this.transform.position, this.transform.rotation);
